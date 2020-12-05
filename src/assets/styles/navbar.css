@@ -1,0 +1,57 @@
+.navbar {
+    background: #fff !important;
+    padding-top: .9rem;
+    padding-bottom: .9rem;
+    box-shadow: 1px 1px 8px -20px rgba(0, 0, 0, 0.2), 4px 0px 5px 1px rgba(0, 0, 0, 0.19);
+}
+
+.navbar-brand {
+    font-weight: 600;
+}
+
+.nav-link {
+    padding: 8px 25px !important;
+    font-weight: 600;
+    font-size: 16px;
+    color: #222 !important;
+}
+.active{
+    color: #0d6efd !important;
+    border-bottom: 1px solid #0d6efd ;
+}
+
+.slider-item {
+    height: 550px;
+    background: linear-gradient(rgba(90, 68, 68, 0.7), rgba(0, 0, 0, 0.5)), url(../images/workshop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-prev {
+    left: 35px;
+    z-index: 5;
+}
+
+.slick-next {
+    right: 35px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    font-family: 'slick';
+    font-size: 40px;
+    opacity: 1;
+
+}
+
+.slick-dots li button:before {
+    font-size: 16px;
+}
+
+.slick-dots li button {
+    display: none;
+}

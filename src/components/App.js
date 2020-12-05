@@ -1,19 +1,25 @@
-import { useReducer } from "react";
-import { BrowserRouter as Router, Link } from "react-router-dom";
-import { foodReducer, foodState } from "../store/reducers/foodReducer";
+import {
+    BrowserRouter as Router
+} from "react-router-dom";
+import AuthProvider from "../providers/authProvider";
+import CountProvider from "../providers/countProvider";
+
 import Routes from "./Routes";
+
+
 
 
 
 const App = () => {
 
     return (
-        <Router>
-            <div className="container">
-
-                <Routes />
-            </div>
-        </Router>
+        <AuthProvider>
+            <CountProvider>
+                <Router>
+                    <Routes />
+                </Router>
+            </CountProvider>
+        </AuthProvider>
     );
 };
 
