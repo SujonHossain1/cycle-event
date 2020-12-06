@@ -3,6 +3,17 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+const carouselData = [
+    {
+        id: 1,
+        img: '',
+        date: '',
+        title: '',
+        description: '',
+        btnStyle: '',
+    }
+]
+
 const Carousel = () => {
     var settings = {
         dots: true,

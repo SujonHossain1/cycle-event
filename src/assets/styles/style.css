@@ -1,4 +1,6 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
+@import 'bootstrap.css';
 @import 'navbar.css';
 *{
     margin: 0;
@@ -6,9 +8,56 @@
     box-sizing: border-box;
 }
 body{
-    margin-top: 70px;
+    font-size: 14px;
     font-family: 'Nunito Sans', sans-serif !important;
+   
 }
 h1, h2, h3, h4, h5, h6{
     font-weight: 700 !important;
 }
+/* Blog Section */
+#blog-section {
+    background-color: var(--bg-color2);
+    padding: 100px 0px;
+    color: var(--font-color);
+    text-align: left;
+}
+
+.blog-section-text {
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+.blog-item {
+    box-shadow: 0px 5px 35px 0px rgba(148, 146, 245, 0.15);
+}
+
+.blog-txt {
+    box-shadow: 0px 5px 35px 0px rgba(148, 146, 245, 0.4);
+    background: #fff;
+    height: 100%;
+    padding: 40px 20px;
+}
+
+.blog-txt h5 {
+    color: var(--font-color);
+}
+
+.blog-txt p {
+    font-size: 14px;
+}
+
+.blog-img img {
+    transition: all 0.4s ease-in;
+}
+
+.blog-img img:hover {
+    filter: saturate(0%);
+}
+
+.blog-btn {
+    font-size: 14px;
+    color: #5f5f5f;
+}
+
+/* End Blog Section */
