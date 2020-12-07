@@ -46,41 +46,33 @@ const Navbar = () => {
 
             }
         }
-
         window.addEventListener('scroll', fixNav);
 
-    }, [window.scrollY]);
+    }, []);
+
     return (
-        <nav className="navbar navbar-expand-md navbar-light bg-light ">
+        <nav className="navbar navbar-expand sticky">
             <div className="container">
-                <Link className="navbar-brand mb-0 h1 text-uppercase" href="#">Cycle Events</Link>
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav ml-auto">
-                        {
-                            navbarRoutes.map(item => (
-                                <li className="nav-item " key={item.id}>
-                                    <NavLink exact to={"/" + item.route} activeClassName="active" className="nav-link" >{item.title} </NavLink>
-                                </li>
-                            ))
-                        }
-                        <li className="nav-item">
-                            <button type="button" className="btn btn-primary text-white ml-3" data-toggle="modal" data-target="#modal">Register</button>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <span style={{ marginRight: '-20px' }} class="nav-link dropdown-toggle pr-0" id="userDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-                                <img class="avatar" src={avatar} alt="" />
-                                <span className="ml-1">Sujon Hossain</span>
-                            </span>
-                            <UserDropdown />
-                        </li>
-                    </ul>
-
-                </div>
-
-
+                <Link to="/" className="navbar-brand mb-0 h1 text-uppercase" href="#">Cycle Events</Link>
+                <ul className="navbar-nav ml-auto">
+                    {
+                        navbarRoutes.map(item => (
+                            <li className="nav-item pd" key={item.id}>
+                                <NavLink exact to={"/" + item.route} activeClassName="active-link" className="nav-link" >{item.title} </NavLink>
+                            </li>
+                        ))
+                    }
+                    <li className="nav-item">
+                        <button type="button" className="btn btn-primary text-white ml-3" data-toggle="modal" data-target="#modal">Register</button>
+                    </li>
+                    <li className="nav-item dropdown">
+                        <span style={{ marginRight: '-20px' }} className="nav-link dropdown-toggle pr-0" id="userDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                            <img className="avatar" src={avatar} alt="" />
+                            <span className="ml-1">Sujon Hossain</span>
+                        </span>
+                        <UserDropdown />
+                    </li>
+                </ul>
             </div>
         </nav>
     );

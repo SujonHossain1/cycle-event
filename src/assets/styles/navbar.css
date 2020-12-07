@@ -1,28 +1,43 @@
 .navbar {
-    background: #fff !important;
+    background: #fff;
     padding-top: .9rem;
     padding-bottom: .9rem;
     box-shadow: 1px 1px 8px -20px rgba(0, 0, 0, 0.2), 4px 0px 5px 1px rgba(0, 0, 0, 0.19);
 }
 
 .navbar-brand {
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .nav-item {
     margin: auto;
 }
 
+.pd {
+    padding: 0px 15px !important;
+}
+
 .nav-link {
-    padding: 0px 25px !important;
     font-weight: 600;
     font-size: 16px;
     color: #222 !important;
+    padding: 0;
+}
+.nav-link:hover{
+    color: var(--primary-color) !important;
+}
+.btn-check:focus+.btn,
+.btn:focus {
+    box-shadow: none !important;
 }
 
-.active {
-    color: #0d6efd !important;
-    border-bottom: 1px solid #0d6efd;
+.form-control:focus {
+    box-shadow: none !important;
+}
+
+.active-link {
+    color: var(--primary-color) !important;
+    border-bottom: 1px solid var(--primary-color);
 }
 
 .avatar {
@@ -37,7 +52,7 @@
     -ms-transition: all 0.20s linear 0s;
     -moz-transition: all 0.20s linear 0s;
     -webkit-transition: all 0.20s linear 0s;
-    animation-duration: 1s;
+    animation-duration: .7s;
 }
 
 .fixed {
@@ -51,8 +66,37 @@
     transition: all 1s linear 0s;
 }
 
-@keyframes fixed {
-    0% {}
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0)
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0)
+    }
+}
+
+.animate__fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
 }
 
 .dropdown-menu-style {
@@ -66,43 +110,40 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90%;
+}
+.modal-content{
+    position: relative;
+}
+.nav-pills{
+    position: absolute;
 }
 
-/** carousel **/
+.active {
+    border-bottom: 2px solid var(--primary-color);
+    color: var(--primary-color) !important;
+}
 
-.slider-item {
-    height: 550px;
-    background: linear-gradient(rgba(90, 68, 68, 0.7), rgba(0, 0, 0, 0.5)), url(../images/workshop.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+.active label {
+    color: #333 !important;
+    font-weight: 600;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
     color: #fff;
-    display: flex !important;
-    justify-content: center;
-    align-items: center;
+    background-color: transparent;
 }
 
-.slick-prev {
-    left: 35px;
-    z-index: 5;
+.nav-pills .nav-link {
+    border-radius: 0px;
+    padding: 11px;
 }
 
-.slick-next {
-    right: 35px;
+.tab-content .active {
+    border: none;
 }
 
-.slick-prev:before,
-.slick-next:before {
-    font-family: 'slick';
-    font-size: 40px;
-    opacity: 1;
-
-}
-
-.slick-dots li button:before {
-    font-size: 16px;
-}
-
-.slick-dots li button {
-    display: none;
+.form-control {
+    padding: .55rem .75rem;
 }
