@@ -51,7 +51,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className="navbar navbar-expand sticky">
+        <nav className="navbar navbar-expand sticky d-none d-md-block">
             <div className="container">
                 <Link to="/" className="navbar-brand mb-0 h1 text-uppercase" href="#">Cycle Events</Link>
                 <ul className="navbar-nav ml-auto">

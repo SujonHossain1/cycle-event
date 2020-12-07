@@ -54,6 +54,21 @@
     -webkit-transition: all 0.20s linear 0s;
     animation-duration: .7s;
 }
+.animation-during{
+    transition: all 1s linear 0s;
+    -o-transition: all 1s linear 0s;
+    -ms-transition: all 1s linear 0s;
+    -moz-transition: all 1s linear 0s;
+    -webkit-transition: all 1s linear 0s;
+    animation-duration: 1.5s;
+}
+.delay1{
+    /* opacity: 0; */
+    animation-delay: 2.2s;
+}
+.delay2{
+    animation-delay: 3.2s;
+}
 
 .fixed {
     width: 100%;

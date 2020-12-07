@@ -22,33 +22,66 @@ const Carousel = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: true,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 3000,
     };
-    return (       
-            <Slider {...settings}>
-                <div className="slider-item" >
+    return (
+        <Slider {...settings}>
+            <div>
+                <div className="slider-item" style={{ background: 'url(https://preview.colorlib.com/theme/eventz/assets/img/hero/h1_hero.png)' }}>
                     <div className="container">
-                        <h4>5 TO 9 MAY 2019, MARDAVALL HOTEL, NEW YORK</h4>
-                        <h1>Change Your Mind To Become Sucess</h1>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <button className="btn btn-primary">Buy Ticket</button>
+                        <div className="row">
+                            <div className="col-md-9">
+                                <h4>18 TO 21 DEC 2020, MIRPUR-10, DHAKA</h4>
+                                <h1 style={{ fontSize: '60px' }}>Change Your Mind To Become Sucess</h1>
+                                <h3 >The Biggest Digital Conference.</h3>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <h3>2</h3>
+            </div>
+            <div>
+                <div className="slider-item" style={{ background: 'url(https://preview.colorlib.com/theme/eventz/assets/img/hero/h1_hero.png)' }}>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-9">
+                                <h4>18 TO 21 DEC 2020, MIRPUR-10, DHAKA</h4>
+                                <h1 style={{ fontSize: '60px' }}>Change Your Mind To Become Sucess</h1>
+                                <h3 >The Biggest Digital Conference.</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h3>3</h3>
+            </div>
+            <div>
+                <div className="slider-item" style={{ background: 'url(https://preview.colorlib.com/theme/eventz/assets/img/hero/h1_hero.png)' }}>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-9">
+                                <h4>18 TO 21 DEC 2020, MIRPUR-10, DHAKA</h4>
+                                <h1 style={{ fontSize: '60px' }}>Change Your Mind To Become Sucess</h1>
+                                <h3 >The Biggest Digital Conference.</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h3>4</h3>
+            </div>
+            <div>
+                <div className="slider-item" style={{ background: 'url(https://preview.colorlib.com/theme/eventz/assets/img/hero/h1_hero.png)' }}>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-9">
+                                <h4>18 TO 21 DEC 2020, MIRPUR-10, DHAKA</h4>
+                                <h1 style={{ fontSize: '60px' }}>Change Your Mind To Become Sucess</h1>
+                                <h3 >The Biggest Digital Conference.</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <h3>5</h3>
-                </div>
+            </div>
+            
 
-            </Slider>
+        </Slider>
     );
 };
 

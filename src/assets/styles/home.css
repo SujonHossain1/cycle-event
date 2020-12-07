@@ -1,14 +1,13 @@
 /** carousel **/
 
 .slider-item {
-    height: 550px;
-    background: linear-gradient(rgba(90, 68, 68, 0.7), rgba(0, 0, 0, 0.5)), url(../images/workshop.jpg);
+    height: 600px;
     background-repeat: no-repeat;
     background-size: cover;
-    color: #fff;
     display: flex !important;
     justify-content: center;
     align-items: center;
+    color: #fff;
 }
 
 .slick-prev {
@@ -34,4 +33,58 @@
 
 .slick-dots li button {
     display: none;
+}
+
+
+/* ********** about ********** */
+.where-when {
+    display: flex;
+    justify-content: space-between;
+}
+
+.where-when img {
+    width: 40px;
+    height: 40px;
+}
+
+.when,
+.where {
+    /* line-height: 5px; */
+}
+
+/* ******** timer *************  */
+.timer-section{
+    max-width: 500px;
+    box-shadow: 1px 1px 2px -31px rgba(0, 0, 0, 0.2), 1px 1px 7px 1px rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    margin-top: -80px;
+    position: relative;
+    z-index: 1;
+    background: white;
+    padding: 15px 10px;
+}
+.timer-section>p {
+    font-size: 20px;
+    line-height: 1.5;
+
+}
+
+.timer {
+    display: flex;
+}
+.timer-section h1{
+    color: #1162fb;
+}
+.time:first-child {
+    border-left: transparent;
+}
+
+.time {
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    
+}
+
+.time h3 {
+    color: #1162fb;
+    font-weight: 600 !important;
 }

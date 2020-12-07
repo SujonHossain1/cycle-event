@@ -1,26 +1,35 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap');
 @import 'bootstrap.css';
-/* @import 'animate.css'; */
+@import 'animate.css';
 @import 'navbar.css';
-@import  'home.css';
+@import 'home.css';
 @import 'footer.css';
-:root{
-    --primary-color:  #0d6efd;
+
+:root {
+    --primary-color: #0d6efd;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-size: 14px;
     font-family: 'Nunito Sans', sans-serif !important;
-   
+
 }
-h1, h2, h3, h4, h5, h6{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-weight: 700 !important;
 }
+
 /* Blog Section */
 #blog-section {
     background-color: var(--bg-color2);
@@ -29,37 +38,48 @@ h1, h2, h3, h4, h5, h6{
     text-align: left;
 }
 
+#blog-section a {
+    text-decoration: none;
+}
+
 .blog-section-text {
-    margin-bottom: 70px;
     text-align: center;
 }
 
-.blog-item {
+.blog-item{
     box-shadow: 0px 5px 35px 0px rgba(148, 146, 245, 0.15);
 }
 
 .blog-txt {
-    box-shadow: 0px 5px 35px 0px rgba(148, 146, 245, 0.4);
     background: #fff;
     height: 100%;
-    padding: 40px 20px;
+    padding: 8px 10px;
+
 }
 
-.blog-txt h5 {
-    color: var(--font-color);
+.blog-txt h4 {
+    color: #333;
+    font-weight: 400 !important;
+    font-size: 22px;
 }
 
-.blog-txt p {
-    font-size: 14px;
+.blog-txt h4:hover {
+    color: var(--primary-color);
+
+}
+
+
+.admin {
+    color: #b3b3b3;
+    font-size: 15px;
+    padding-top: 15px;
 }
 
 .blog-img img {
     transition: all 0.4s ease-in;
 }
 
-.blog-img img:hover {
-    filter: saturate(0%);
-}
+
 
 .blog-btn {
     font-size: 14px;
