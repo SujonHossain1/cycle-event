@@ -1,6 +1,7 @@
 import React from 'react';
-import LoginForm from './LoginForm';
-import SignUpForm from './SignUpForm';
+import Login from '../../Auth/Login';
+import Register from '../../Auth/Register';
+
 
 const Modal = () => {
     return (
@@ -40,10 +41,10 @@ const Modal = () => {
                     <div className="modal-body">
                         <div className="tab-content" id="pills-tabContent">
                             <div className="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
-                                <LoginForm />
+                                <Login />
                             </div>
                             <div className="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
-                                <SignUpForm />
+                                <Register />
                             </div>
                         </div>
                     </div>
