@@ -5,6 +5,7 @@ import Modal from '../Shared/Navbar/Modal';
 import Navbar from '../Shared/Navbar/Navbar';
 import AboutHome from './AboutHome';
 import Carousel from './Carousel';
+import sampleComponent from './Gallery';
 import Timer from './Timer';
 
 
@@ -18,6 +19,7 @@ const Home = () => {
             <Timer/>
             <AboutHome/>
             <Blog />
+            <sampleComponent/>
             <Footer/>
             
         </>

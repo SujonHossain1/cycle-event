@@ -3,7 +3,8 @@ import React from 'react';
 const FooterSubscribe = () => {
     return (
         <div className="subscribe">
-            <p>Trade Alert - Delivering the latest product trends and industry news straight to your inbox.</p>
+            <h3>Subscribe Newsletter</h3>
+            <p>Subscribe to our newsletter and don’t miss anything</p>
             <form >
                 <input className="subscribe-input" type="email" name="email" placeholder="Your Email"/>
                 <button className="subscribe-btn">Subscribe</button>
