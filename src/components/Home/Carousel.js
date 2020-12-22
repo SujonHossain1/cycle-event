@@ -32,7 +32,7 @@ const Carousel = () => {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-9">
-                                <h4>18 TO 21 DEC 2020, MIRPUR-10, DHAKA</h4>
+                                <h4 class="animate__rotateOutDownLeft animate__animated animate__delay-1s">18 TO 21 DEC 2020, MIRPUR-10, DHAKA</h4>
                                 <h1 style={{ fontSize: '60px' }}>Change Your Mind To Become Sucess</h1>
                                 <h3 >The Biggest Digital Conference.</h3>
                             </div>

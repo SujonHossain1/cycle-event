@@ -1,10 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const UserDropdown = () => {
     return (
         <ul className="dropdown-menu dropdown-menu-style" aria-labelledby="userDropdown">
-            <h3>Sujon Hossain</h3>
-            <button className="btn btn-success">Sun</button>
+            <div className="text-center ">
+                <Link to="/profile" className="btn w-100 btn-secondary">Profile</Link>
+                <br/>
+                <button className="btn mt-2 w-100 btn-danger">Logout</button>
+            </div>
         </ul>
     );
 };

@@ -3,6 +3,7 @@
 @import 'animate.css';
 @import 'navbar.css';
 @import 'home.css';
+@import 'profile.css';
 @import 'footer.css';
 
 :root {
@@ -37,7 +38,7 @@ h6 {
 /* Blog Section */
 #blog-section {
     background-color: var(--bg-color2);
-    padding: 100px 0px;
+    padding: 50px 0px;
     color: var(--font-color);
     text-align: left;
 }

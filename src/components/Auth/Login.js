@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import useForm from './useForm';
 import validate from './validate';
-
+import facebook from '../../assets/images/icons/facebook.png';
+import google from '../../assets/images/icons/google.png';
 
 const Login = () => {
 
@@ -54,12 +55,17 @@ const Login = () => {
                 </div>
                 <span style={{ cursor: 'pointer' }}>Forget Password</span>
             </div>
-
+            
             <button
                 type="submit"
                 className={email && password ? 'btn btn-primary w-100' : 'btn btn-primary disabled w-100'}
             >Login
             </button>
+            <div className="my-3 text-center">
+                <h4 className="">or</h4>
+                <img className="mr-3" src={facebook} alt=""/>
+                <img src={google} alt=""/>
+            </div>
         </form>
     );
 };

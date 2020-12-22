@@ -5,7 +5,7 @@ const BlogItem = ({ blog }) => {
     const { title, img, by, date, description, comment, id } = blog;
 
     return (
-        <div className="col-12 col-sm-6 col-md-6 col-lg-4 pb-5">
+        <div className="col-12 col-sm-6 col-md-6 col-lg-6 pb-5">
             <div className="blog-item ">
                 <Link to={`/blogs/${id}`}>
                     <div className="blog-img">

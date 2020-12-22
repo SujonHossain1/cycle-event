@@ -66,7 +66,7 @@ const Navbar = () => {
                         <button type="button" className="btn btn-primary text-white ml-3" data-toggle="modal" data-target="#modal">Register</button>
                     </li>
                     <li className="nav-item dropdown">
-                        <span style={{ marginRight: '-20px' }} className="nav-link dropdown-toggle pr-0" id="userDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                        <span  className="nav-link dropdown-toggle pr-0" id="userDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                             <img className="avatar" src={avatar} alt="" />
                             <span className="ml-1">Sujon Hossain</span>
                         </span>

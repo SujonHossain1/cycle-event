@@ -54,10 +54,10 @@
 
 /* ******** timer *************  */
 .timer-section{
-    max-width: 500px;
-    box-shadow: 1px 1px 2px -31px rgba(0, 0, 0, 0.2), 1px 1px 7px 1px rgba(0, 0, 0, 0.19);
+    /* max-width: 500px; */
+    /* box-shadow: 1px 1px 2px -31px rgba(0, 0, 0, 0.2), 1px 1px 7px 1px rgba(0, 0, 0, 0.19); */
     border-radius: 5px;
-    margin-top: -80px;
+    /* margin-top: -80px; */
     position: relative;
     z-index: 1;
     background: white;
@@ -88,4 +88,22 @@
 .time h3 {
     color: #1162fb;
     font-weight: 600 !important;
+}
+
+.leader-item img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid #dee2e6;
+}
+.leader-item{
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+}
+.leader-item h4{
+    font-size: 18px;
+    line-height: 7px;
+
 }
