@@ -3,7 +3,10 @@
 @import 'animate.css';
 @import 'navbar.css';
 @import 'home.css';
+@import 'blog.css';
 @import 'profile.css';
+@import 'contact.css';
+@import 'schedule.css';
 @import 'footer.css';
 
 :root {
@@ -19,7 +22,7 @@
 body {
     font-size: 14px;
     font-family: 'Nunito Sans', sans-serif !important;
-
+    color: #212121;
 }
 
 h1,
@@ -34,6 +37,9 @@ h6 {
     font-size: 12px;
     color: red;
     margin-top: 5px;
+}
+.event{
+
 }
 /* Blog Section */
 #blog-section {

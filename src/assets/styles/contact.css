@@ -1,0 +1,49 @@
+#contact-section{
+    background: url(../images/biography-bg.png) no-repeat;
+    background-size: cover;
+    color: white;
+    padding: 80px 0px;
+    width: 100%;
+
+}
+.contact-wrap{
+    max-width: 758px;
+    margin: 0 auto;
+    border: 5px solid linear-gradient(blue, #E91E63);
+    padding: 65px 99px 87px;
+    margin-top: 15px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    color: black;
+    background: transparent;
+}
+.contact-wrap label{
+    font-size: 14px;
+}
+#contact-section input,textarea {
+    display: block;
+    width: 100%;
+    background: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid#0d99d7;
+    margin-bottom: 24px;
+    padding-top: 11px;
+    font-size: 16px;
+}
+.contact-title{
+    padding-bottom: 30px;
+    text-align: center;
+}
+.contact-title h1{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+}
+.contact-title p{
+    padding-bottom: 15px;
+}
+#contact-section input[type=submit]{
+  width: 50%;
+  
+}

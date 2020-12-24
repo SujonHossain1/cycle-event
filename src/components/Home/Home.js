@@ -6,6 +6,7 @@ import Navbar from '../Shared/Navbar/Navbar';
 import AboutHome from './AboutHome';
 import Carousel from './Carousel';
 import LeaderBoard from './LeaderBoard';
+import LeaderCarousel from './LeaderCarousel';
 import Timer from './Timer';
 
 const events = [
@@ -32,8 +33,6 @@ const Home = () => {
 
     return (
         <>
-            <Navbar />
-            <Modal />
             <Carousel />
             <div className="container">
                 <div className="row">
@@ -51,13 +50,12 @@ const Home = () => {
                         <Blog />
                     </div>
                     <div className="col-md-4">
-                        <LeaderBoard/>
+                        <LeaderBoard />
                     </div>
                 </div>
             </div>
             <AboutHome />
-            <Footer />
-
+            <LeaderCarousel />
         </>
     );
 };

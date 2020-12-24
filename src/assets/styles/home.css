@@ -53,7 +53,7 @@
 }
 
 /* ******** timer *************  */
-.timer-section{
+.timer-section {
     /* max-width: 500px; */
     /* box-shadow: 1px 1px 2px -31px rgba(0, 0, 0, 0.2), 1px 1px 7px 1px rgba(0, 0, 0, 0.19); */
     border-radius: 5px;
@@ -63,6 +63,7 @@
     background: white;
     padding: 15px 10px;
 }
+
 .timer-section>p {
     font-size: 20px;
     line-height: 1.5;
@@ -72,9 +73,11 @@
 .timer {
     display: flex;
 }
-.timer-section h1{
+
+.timer-section h1 {
     color: #1162fb;
 }
+
 .time:first-child {
     border-left: transparent;
 }
@@ -82,7 +85,7 @@
 
 .time {
     border-left: 1px solid rgba(0, 0, 0, 0.05);
-    
+
 }
 
 .time h3 {
@@ -90,20 +93,60 @@
     font-weight: 600 !important;
 }
 
-.leader-item img{
+.leader-item img {
     width: 60px;
     height: 60px;
     border-radius: 50%;
     border: 2px solid #dee2e6;
 }
-.leader-item{
+
+.leader-item {
     border-bottom: 1px solid #dee2e6;
     display: flex;
     align-items: center;
     padding: 8px 10px;
 }
-.leader-item h4{
+
+.leader-item h4 {
     font-size: 18px;
     line-height: 7px;
 
+}
+
+.leader-board-title {
+    text-align: center;
+    padding: 15px 0px;
+    position: relative;
+    line-height: 12px;
+}
+
+.leader-board-title h3 {
+    font-size: 23px;
+}
+
+.leader-board-title span {
+    font-size: 30px;
+    position: relative;
+    top: -10px;
+    color: var(--primary-color);
+}
+
+.leader-board-title span::before {
+    content: " ";
+    width: 90px;
+    height: 2px;
+    background: var(--primary-color);
+    position: absolute;
+    top: 24px;
+    left: 26px;
+}
+
+.leader-board-title span::after {
+    content: " ";
+    width: 90px;
+    height: 2px;
+    background: var(--primary-color);
+    position: absolute;
+    top: 24px;
+    right: 26px;
 }

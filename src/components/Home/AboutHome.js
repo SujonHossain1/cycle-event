@@ -4,7 +4,7 @@ import when from '../../assets/images/icons/study.png';
 import aboutImg from '../../assets/images/about1.png';
 const AboutHome = () => {
     return (
-        <div className="container">
+        <div className="container mb-5 pb-3">
             <div className="row">
                 <div className="col-md-6 d-flex align-items-center">
                     <div className="about-home-content ">

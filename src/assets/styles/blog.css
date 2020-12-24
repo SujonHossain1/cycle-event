@@ -1,0 +1,109 @@
+:root {
+    --bg-color1: #eeeeeede;
+    --bg-color2: #fff;
+    --brand-color: #000045;
+    --font-color: #424242;
+    --border-color: #BDBDBD;
+    --hover-color: #0056b3;
+}
+.title-style {
+    color: var(--brand-color);
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+    font-weight: 700;
+    font-size: 34px;
+}
+
+.title-style::before {
+    content: '';
+    width: 250px;
+    height: 1px;
+    background: #00000036;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+}
+
+.title-style::after {
+    content: '';
+    width: 60px;
+    height: 2px;
+    background: #00000099;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 30px);
+}
+
+.post {
+    background: rgb(221, 219, 219);
+    font-size: 15px;
+    margin-top: 25px;
+    padding: 15px 0px;
+}
+
+.content {
+    padding: 30px;
+}
+
+.post-title h4 {
+    font-size: 26px;
+    line-height: normal;
+    font-weight: 500;
+    margin-bottom: 0;
+    color: var(--font-color);
+}
+
+.meta {
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.content p {
+    color: var(--font-color);
+}
+
+.meta li {
+    display: inline-block;
+    font-size: 14px;
+    color: var(--font-color);
+    margin: 5px;
+    list-style: none;
+}
+
+.meta li span {
+    color: var(--brand-color);
+    padding-right: 5px;
+}
+
+.share-post {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--brand-color);
+    text-align: justify;
+}
+
+.share-post span {
+    color: var(--font-color);
+    font-weight: 700;
+}
+
+.share-post ul {
+    float: right;
+}
+
+.share-post ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.blogs .posts .title-g h3 {
+    font-weight: 700;
+    font-size: 25px;
+    color: white;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}

@@ -1,10 +1,10 @@
 import {
     BrowserRouter as Router
 } from "react-router-dom";
-import AuthProvider from "../providers/authProvider";
-import CountProvider from "../providers/countProvider";
-
 import Routes from "./Routes";
+import Footer from "./Shared/Footer/Footer";
+import Modal from "./Shared/Navbar/Modal";
+import Navbar from "./Shared/Navbar/Navbar";
 
 
 
@@ -13,13 +13,11 @@ import Routes from "./Routes";
 const App = () => {
 
     return (
-        <AuthProvider>
-            <CountProvider>
-                <Router>
-                    <Routes />
-                </Router>
-            </CountProvider>
-        </AuthProvider>
+        <Router>
+            <Navbar />
+            <Modal />
+            <Routes />
+        </Router>
     );
 };
 
