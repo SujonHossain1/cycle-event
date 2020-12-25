@@ -18,7 +18,7 @@ const Register = () => {
                     type="text"
                     className="form-control"
                     name="fullName"
-                    onBlur={inputHandler}
+                    onChange={inputHandler}
                     defaultValue={values.fullName}
                     placeholder="Jhon Deo"
                 />
@@ -30,7 +30,7 @@ const Register = () => {
                     type="email"
                     className="form-control"
                     name="email"
-                    onBlur={inputHandler}
+                    onChange={inputHandler}
                     defaultValue={values.email}
                     placeholder="jhondeo@example.com"
                 />
@@ -41,7 +41,7 @@ const Register = () => {
                 <input
                     type="password"
                     className="form-control"
-                    onBlur={inputHandler}
+                    onChange={inputHandler}
                     defaultValue={values.password}
                     name="password"
                 />
@@ -52,7 +52,7 @@ const Register = () => {
                 <input
                     type="password"
                     className="form-control"
-                    onBlur={inputHandler}
+                    onChange={inputHandler}
                     defaultValue={values.confirmPassword}
                     name="confirmPassword"
                 />

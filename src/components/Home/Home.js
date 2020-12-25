@@ -1,13 +1,13 @@
-import React from 'react';
-import Blog from '../Blog/Blog';
-import Footer from '../Shared/Footer/Footer';
-import Modal from '../Shared/Navbar/Modal';
-import Navbar from '../Shared/Navbar/Navbar';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { fetchPosts } from '../../store/actions/blogAction';
 import AboutHome from './AboutHome';
 import Carousel from './Carousel';
 import LeaderBoard from './LeaderBoard';
 import LeaderCarousel from './LeaderCarousel';
 import Timer from './Timer';
+import commentImg from '../../assets/images/icons/comment.png';
 
 const events = [
     {
@@ -29,6 +29,12 @@ const events = [
 ]
 
 const Home = () => {
+    const blogs = useSelector(state => state.blogs.blogs);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchPosts());
+    }, [dispatch]);
 
 
     return (
@@ -47,7 +53,31 @@ const Home = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-8">
-                        <Blog />
+                        <div className="row">
+                            {
+                                blogs.slice(0, 2).map(blog => (
+
+                                    <div className="col-12 col-sm-6 col-md-6 col-lg-6 pt-5">
+                                        <div className="blog-item ">
+                                            <Link to={`/blogs/${blog._id}`}>
+                                                <div className="blog-img">
+                                                    <img className="img-fluid" src={blog.image} alt="" />
+                                                </div>
+                                                <div className="blog-txt">
+                                                    <p className="admin"> {blog.date} {blog.by}   <img className="ml-2" src={commentImg} alt="" /> <span> 0 </span> </p>
+                                                    <h4> {blog.title.substr(0, 80)} </h4>
+                                                    <p> {blog.description?.substr(0, 150) + "..."} </p>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    </div>
+
+                                ))
+                            }
+                        </div>
+                        <div className="text-center mt-5">
+                            <Link to="/blogs" className="btn btn-outline-primary"> See All Blogs </Link>
+                        </div>
                     </div>
                     <div className="col-md-4">
                         <LeaderBoard />

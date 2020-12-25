@@ -24,7 +24,7 @@ const Login = () => {
                     type="email"
                     className="form-control"
                     name="email"
-                    onBlur={inputHandler}
+                    onChange={inputHandler}
                     defaultValue={values.email}
                     placeholder="jhondeo@example.com"
                 />
@@ -36,7 +36,7 @@ const Login = () => {
                     type="password"
                     className="form-control"
                     name="password"
-                    onBlur={inputHandler}
+                    onChange={inputHandler}
                     defaultValue={values.password}
                     placeholder="Password"
                 />

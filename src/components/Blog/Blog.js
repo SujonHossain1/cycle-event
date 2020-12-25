@@ -1,10 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import img1 from '../../assets/images/blog/blog-1.jpg';
 import img2 from '../../assets/images/blog/blog-2.jpg';
 import img3 from '../../assets/images/blog/blog-3.jpg';
-
+import { fetchPosts } from '../../store/actions/blogAction';
 import BlogItem from './BlogItem';
+
+
 const blogData = [
     {
         id: 'blog-1',
@@ -36,17 +38,23 @@ const blogData = [
 ]
 
 const Blog = () => {
-    return (
+    const dispatch = useDispatch();
+    const blogs = useSelector(state => state.blogs.blogs);
 
+    useEffect(() => {
+        dispatch(fetchPosts())
+    }, [dispatch])
+
+    return (
         <section id="blog-section">
             <div className="container">
-                <div class="blog-section-text">
-                    <h2 class="title-style">Blogs</h2>
+                <div className="blog-section-text">
+                    <h2 className="title-style">Blogs</h2>
                 </div>
                 <div className="row pt-5">
                     {
-                        blogData.map(blog => <BlogItem
-                            key={blog.id}
+                        blogs.map(blog => <BlogItem
+                            key={blog._id}
                             blog={blog}
                         />)
                     }
