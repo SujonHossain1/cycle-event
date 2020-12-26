@@ -7,6 +7,7 @@ import Carousel from './Carousel';
 import LeaderBoard from './LeaderBoard';
 import LeaderCarousel from './LeaderCarousel';
 import Timer from './Timer';
+import moment from 'moment';
 import commentImg from '../../assets/images/icons/comment.png';
 
 const events = [
@@ -53,18 +54,21 @@ const Home = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-8">
+                        <div className="blog-section-text pt-4 pb-2">
+                            <h4 className="title-style">Reacts Post</h4>
+                        </div>
                         <div className="row">
                             {
                                 blogs.slice(0, 2).map(blog => (
 
                                     <div className="col-12 col-sm-6 col-md-6 col-lg-6 pt-5">
                                         <div className="blog-item ">
-                                            <Link to={`/blogs/${blog._id}`}>
+                                            <Link to={`/blogs/${blog._id}`} style={{ textDecoration: 'none' }}>
                                                 <div className="blog-img">
                                                     <img className="img-fluid" src={blog.image} alt="" />
                                                 </div>
                                                 <div className="blog-txt">
-                                                    <p className="admin"> {blog.date} {blog.by}   <img className="ml-2" src={commentImg} alt="" /> <span> 0 </span> </p>
+                                                    <p className="admin"> {moment(blog.date).fromNow()} {blog.by}   <img className="ml-2" src={commentImg} alt="" /> <span> 0 </span> </p>
                                                     <h4> {blog.title.substr(0, 80)} </h4>
                                                     <p> {blog.description?.substr(0, 150) + "..."} </p>
                                                 </div>

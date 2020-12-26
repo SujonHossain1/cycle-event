@@ -7,19 +7,17 @@
     --hover-color: #0056b3;
 }
 .title-style {
-    color: var(--brand-color);
     position: relative;
     padding-bottom: 15px;
     margin-bottom: 0;
     font-weight: 700;
-    font-size: 34px;
 }
 
 .title-style::before {
     content: '';
     width: 250px;
     height: 1px;
-    background: #00000036;
+    background: var(--primary-color);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -32,7 +30,7 @@
     content: '';
     width: 60px;
     height: 2px;
-    background: #00000099;
+    background: var(--primary-color);
     position: absolute;
     bottom: 0;
     left: calc(50% - 30px);

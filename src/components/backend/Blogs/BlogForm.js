@@ -1,11 +1,25 @@
-import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import BaseFile from 'react-file-base64';
-import { addPost } from '../../../store/actions/blogAction';
+import { addPost, getSinglePost, updateBlogPost } from '../../../store/actions/blogAction';
 
-const BlogForm = () => {
+const BlogForm = ({ currentId }) => {
     const [values, setValues] = useState({ image: '', tags: ' ' });
+    const singleBlog = useSelector(state => state.blogs.singleBlog)
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        if (currentId) {
+            dispatch(getSinglePost(currentId))
+        }
+    }, [currentId, dispatch]);
+
+    useEffect(() => {
+        setValues(singleBlog)
+    }, [singleBlog]);
+
+   
+       
 
     const inputHandler = (event) => {
         const { name, value } = event.target;
@@ -17,21 +31,34 @@ const BlogForm = () => {
         })
     };
 
-    let { tags } = values;
-
+    
+   
     const submitHandler = (event) => {
-
         event.preventDefault();
-        tags = tags ? tags.split(' ') : [];
-
-        dispatch(addPost(values));
-        console.log(values);
+       
+        if (currentId) {
+            dispatch(updateBlogPost(currentId, values))
+        } else {
+            dispatch(addPost(values));
+        }
 
 
     }
 
     return (
-        <form onSubmit={submitHandler} className="p-3 border shadow-sm mt-5">
+        <form onSubmit={submitHandler} className="p-3 border shadow-sm mt-5" id="form-id">
+            <div className="form-group">
+                <label htmlFor="creator" >Creator</label>
+                <input
+                    type="text"
+                    id="creator"
+                    name="creator"
+                    onChange={inputHandler}
+                    defaultValue={values.creator}
+                    className="form-control"
+                    placeholder="Creator"
+                />
+            </div>
             <div className="form-group">
                 <label htmlFor="title" >Title</label>
                 <input
@@ -39,6 +66,7 @@ const BlogForm = () => {
                     id="title"
                     name="title"
                     onChange={inputHandler}
+                    defaultValue={values.title}
                     className="form-control"
                     placeholder="Title"
                 />
@@ -50,6 +78,7 @@ const BlogForm = () => {
                     id="tags"
                     name="tags"
                     onChange={inputHandler}
+                    defaultValue={values.tags}
                     className="form-control"
                     placeholder="Tags splite with blank space"
                 />
@@ -61,6 +90,7 @@ const BlogForm = () => {
                     id="description"
                     name="description"
                     onChange={inputHandler}
+                    defaultValue={values.description}
                     className="form-control"
                     placeholder="Description"
                 />
