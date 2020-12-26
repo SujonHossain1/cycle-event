@@ -5,10 +5,10 @@ import { fetchPosts } from '../../store/actions/blogAction';
 import AboutHome from './AboutHome';
 import Carousel from './Carousel';
 import LeaderBoard from './LeaderBoard';
-import LeaderCarousel from './LeaderCarousel';
 import Timer from './Timer';
 import moment from 'moment';
 import commentImg from '../../assets/images/icons/comment.png';
+import Gallery from './Gallery';
 
 const events = [
     {
@@ -54,9 +54,7 @@ const Home = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-8">
-                        <div className="blog-section-text pt-4 pb-2">
-                            <h4 className="title-style">Reacts Post</h4>
-                        </div>
+                        
                         <div className="row">
                             {
                                 blogs.slice(0, 2).map(blog => (
@@ -83,13 +81,13 @@ const Home = () => {
                             <Link to="/blogs" className="btn btn-outline-primary"> See All Blogs </Link>
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 mt-3">
                         <LeaderBoard />
                     </div>
                 </div>
             </div>
             <AboutHome />
-            <LeaderCarousel />
+            <Gallery/>
         </>
     );
 };

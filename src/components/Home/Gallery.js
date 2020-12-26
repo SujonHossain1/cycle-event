@@ -1,54 +1,61 @@
-// import { LightBoxGallery, GalleryItem } from 'react-magnific-popup';
+import React from 'react';
+import img1 from '../../assets/images/course01.jpg'
+import img2 from '../../assets/images/course02.jpg'
+import img3 from '../../assets/images/course03.jpg';
+import img4 from '../../assets/images/course04.jpg';
+import img5 from '../../assets/images/course07.jpg';
+import img6 from '../../assets/images/course06.jpg';
 
-// const config = {
-// 	delegate: 'a',
-// 	type: 'image',
-// 	closeOnContentClick: false,
-// 	closeBtnInside: false,
-// 	mainClass: 'mfp-with-zoom mfp-img-mobile',
-// 	image: {
-// 		verticalFit: true,
-// 		titleSrc: function(item) {
-// 			return item.el.attr('title') + ' &middot; <a className="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-// 		}
-// 	},
-// 	gallery: {
-// 		enabled: true
-// 	},
-// 	zoom: {
-// 		enabled: true,
-// 		duration: 300, 
-// 		opener: function(element) {
-// 			return element.find('img');
-// 		}
-// 	}
-// }
+const gallery = [
+    {
+        id: 1,
+        img: img1,
+    },
+    {
+        id: 2,
+        img: img2,
+    },
+    {
+        id: 3,
+        img: img3,
+    },
+    {
+        id: 4,
+        img: img4,
+    },
+    {
+        id: 5,
+        img: img5,
+    },
+    {
+        id: 6,
+        img: img6,
+    }
+]
 
+const Gallery = () => {
+    return (
 
-// const sampleComponent = () => {
-//   return (
-//     <LightBoxGallery 
-//       className="popup-gallery"
-//       config={config}
-//     >
-//       <GalleryItem
-//         href="http://farm4.staticflickr.com/3763/9204547649_0472680945_o.jpg" 
-//         data-source="http://500px.com/photo/32736307" 
-//         title="Into The Blue" 
-//         style={{width: '193px', height:'125px'}}
-//       >
-//         <img src="http://farm4.staticflickr.com/3763/9204547649_7de96ee188_t.jpg" width="193" height="125" />
-//       </GalleryItem>
-//       <GalleryItem
-//         href="http://farm3.staticflickr.com/2856/9207329420_7f2a668b06_o.jpg" 
-//         data-source="http://500px.com/photo/32554131" 
-//         title="Light Sabre" 
-//         style={{width: '82px', height: '125px'}}
-//       >
-//         <img src="http://farm3.staticflickr.com/2856/9207329420_e485948b01_t.jpg" width="82px" height="125" />
-//       </GalleryItem>
-//     </LightBoxGallery> 
-//   );
-// }
+        <div class="container mb-4">
+            <div className="blog-section-text pt-4 pb-2">
+                <h4 className="title-style">Gallery </h4>
+            </div>
 
-// export default sampleComponent; 
+            <div class="row">
+                {
+                    gallery.map((item) => (
+                        <div class="col-md-4  py-2">
+                            <div class="course">
+                                <img class=" img-fluid rounded" src={item.img} alt="" />
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
+
+        </div>
+
+    );
+};
+
+export default Gallery;

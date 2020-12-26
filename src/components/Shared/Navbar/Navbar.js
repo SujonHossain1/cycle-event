@@ -12,11 +12,6 @@ const navbarRoutes = [
         route: ''
     },
     {
-        id: 2,
-        title: 'About',
-        route: 'about'
-    },
-    {
         id: 3,
         title: 'Schedule',
         route: 'schedule'

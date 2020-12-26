@@ -24,7 +24,7 @@ const BlogDetails = () => {
         dispatch(getSinglePost(id))
     }, [dispatch, id]);
 
-    // console.log(singleBlog)
+
     return (
 
         <div className="container">

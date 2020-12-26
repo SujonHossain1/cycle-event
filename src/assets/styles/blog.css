@@ -69,19 +69,19 @@
 }
 
 .meta li span {
-    color: var(--brand-color);
+    color: var(--primary-color);
     padding-right: 5px;
 }
 
 .share-post {
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 1px solid var(--brand-color);
+    border-top: 1px solid var(--primary-color);
     text-align: justify;
 }
 
 .share-post span {
-    color: var(--font-color);
+    color: var(--primary-color);
     font-weight: 700;
 }
 

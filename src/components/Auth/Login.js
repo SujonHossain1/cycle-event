@@ -55,16 +55,15 @@ const Login = () => {
                 </div>
                 <span style={{ cursor: 'pointer' }}>Forget Password</span>
             </div>
-            
+
             <button
                 type="submit"
                 className={email && password ? 'btn btn-primary w-100' : 'btn btn-primary disabled w-100'}
             >Login
             </button>
             <div className="my-3 text-center">
-                <h4 className="">or</h4>
-                <img className="mr-3" src={facebook} alt=""/>
-                <img src={google} alt=""/>
+                <button className="btn btn-outline-primary mr-3">Login With <img src={facebook} alt="" /> </button>
+                <button className="btn btn-outline-secondary">Login With <img src={google} alt="" /> </button>
             </div>
         </form>
     );

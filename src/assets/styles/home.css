@@ -2,14 +2,16 @@
 
 .slider-item {
     height: 600px;
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
+    background-size: cover !important;
+    background-repeat: no-repeat!important;
+    background-position: center center!important;
+    color: #fff; 
     display: flex !important;
     justify-content: center;
     align-items: center;
-    color: #fff;
 }
-
+    
 .slick-prev {
     left: 35px;
     z-index: 5;
@@ -47,10 +49,6 @@
     height: 40px;
 }
 
-.when,
-.where {
-    /* line-height: 5px; */
-}
 
 /* ******** timer *************  */
 .timer-section {
@@ -93,6 +91,12 @@
     font-weight: 600 !important;
 }
 
+.leader-board{
+    background: linear-gradient(45deg, #dc3545, #482c9a);
+    border-radius: 12px;
+    color: white;
+}
+
 .leader-item img {
     width: 60px;
     height: 60px;
@@ -104,7 +108,7 @@
     border-bottom: 1px solid #dee2e6;
     display: flex;
     align-items: center;
-    padding: 8px 10px;
+    padding: 8px 15px;
 }
 
 .leader-item h4 {
