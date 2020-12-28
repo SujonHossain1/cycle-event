@@ -4,7 +4,7 @@ import BaseFile from 'react-file-base64';
 import { addPost, getSinglePost, updateBlogPost } from '../../../store/actions/blogAction';
 
 const BlogForm = ({ currentId }) => {
-    const [values, setValues] = useState({ image: '', tags: ' ' });
+    const [values, setValues] = useState({ image: '', tags: '' });
     const singleBlog = useSelector(state => state.blogs.singleBlog)
     const dispatch = useDispatch();
 
@@ -18,8 +18,8 @@ const BlogForm = ({ currentId }) => {
         setValues(singleBlog)
     }, [singleBlog]);
 
-   
-       
+
+
 
     const inputHandler = (event) => {
         const { name, value } = event.target;
@@ -31,17 +31,19 @@ const BlogForm = ({ currentId }) => {
         })
     };
 
-    
-   
+
+
     const submitHandler = (event) => {
         event.preventDefault();
-       
+
         if (currentId) {
             dispatch(updateBlogPost(currentId, values))
         } else {
             dispatch(addPost(values));
         }
 
+        // clear data 
+        setValues({});
 
     }
 
@@ -80,7 +82,7 @@ const BlogForm = ({ currentId }) => {
                     onChange={inputHandler}
                     defaultValue={values.tags}
                     className="form-control"
-                    placeholder="Tags splite with blank space"
+                    placeholder="Tags split with comma"
                 />
             </div>
             <div className="form-group">

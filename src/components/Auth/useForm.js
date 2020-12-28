@@ -18,7 +18,6 @@ const useForm = (submit, validate) => {
     const submitHandler = (event) => {
         event.preventDefault();
         setErrors(validate(values));
-        console.log(values);
         setIsSubmitting(true);
     };
 

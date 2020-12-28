@@ -10,13 +10,16 @@ import {
 } from 'react-icons/fa';
 import { useParams } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { getSinglePost } from '../../store/actions/blogAction';
+import { fetchPosts, getSinglePost } from '../../store/actions/blogAction';
 import moment from 'moment';
+import RecentBlog from './RecentBlog';
 
 const BlogDetails = () => {
     const { id } = useParams();
-    const singleBlog = useSelector(state => state.blogs.singleBlog);
     const dispatch = useDispatch();
+    const singleBlog = useSelector(state => state.blogs.singleBlog);
+    const blogs = useSelector(state => state.blogs.blogs);
+
 
     const { title, description, creator, image, tags, date } = singleBlog;
 
@@ -24,6 +27,12 @@ const BlogDetails = () => {
         dispatch(getSinglePost(id))
     }, [dispatch, id]);
 
+    useEffect(() => {
+        dispatch(fetchPosts());
+    }, [dispatch]);
+
+    const tagsList = tags?.split(',');
+    console.log(tagsList);
 
     return (
 
@@ -43,6 +52,11 @@ const BlogDetails = () => {
                                 <li> <span> <FaCalendar /> {moment(date).fromNow()} </span> </li>
                                 <li> <span> <FaTags /> Blog </span> </li>
                             </div>
+                            <div className="tags">
+                                {
+                                    tagsList?.map((tag) => <span className="tag"> {tag} </span>)
+                                }
+                            </div>
                             <p className="card-text"> {description}</p>
 
                             <div className="share-post">
@@ -57,6 +71,15 @@ const BlogDetails = () => {
                         </div>
 
                     </div>
+                </div>
+                <div className="col-md-3">
+                    <h3 className="recent-title">Recent Blogs</h3>
+                    {
+                        blogs.slice(0, 3).map(blog => <RecentBlog
+                            key={blog._id}
+                            blog={blog}
+                        />)
+                    }
                 </div>
             </div>
         </div>

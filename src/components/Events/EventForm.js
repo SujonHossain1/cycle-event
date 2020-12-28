@@ -2,15 +2,18 @@ import React from 'react';
 
 const EventForm = () => {
     return (
-        <form className="p-5 shadow-sm">
+        <form className=" col-md-8 pb-3 mx-auto">
+            <div className="blog-section-text mb-4">
+                <h2 className="title-style">Register Now</h2>
+            </div>
             <div className="form-row row">
                 <div className="form-group pb-3 col-md-6">
-                    <label className="pb-1" htmlFor="inputEmail4">Full Name</label>
+                    <label className="pb-1" htmlFor="inputEmail4">First Name</label>
                     <input type="email" className="form-control" id="inputEmail4" placeholder="Full Name" />
                 </div>
                 <div className="form-group pb-3 col-md-6">
-                    <label className="pb-1" htmlFor="inputPassword4">Username</label>
-                    <input type="password" className="form-control" id="inputPassword4" placeholder="Username" />
+                    <label className="pb-1" htmlFor="inputPassword4">Last Name</label>
+                    <input type="password" className="form-control" id="inputPassword4" placeholder="Last Name" />
                 </div>
             </div>
             <div className="form-row row">
@@ -23,17 +26,6 @@ const EventForm = () => {
                     <input type="password" className="form-control" id="inputPassword4" placeholder="+88 017++++++" />
                 </div>
             </div>
-            <div className="form-row row">
-                <div className="form-group pb-3 col-md-6">
-                    <label className="pb-1" htmlFor="inputAddress">Password</label>
-                    <input type="text" className="form-control" id="inputAddress" placeholder="Password" />
-                </div>
-                <div className="form-group pb-3 col-md-6">
-                    <label className="pb-1" htmlFor="inputPassword4">Confirm Password</label>
-                    <input type="password" className="form-control" id="inputPassword4" placeholder="Confirm Password" />
-                </div>
-            </div>
-
 
             <div className="form-row row">
                 <div className="form-group pb-3 col-md-6">

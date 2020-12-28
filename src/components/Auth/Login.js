@@ -6,14 +6,14 @@ import google from '../../assets/images/icons/google.png';
 
 const Login = () => {
 
-    const { values, errors, inputHandler, submitHandler } = useForm(submit, validate);
+    let { values, errors, inputHandler, submitHandler } = useForm(submit, validate);
     const [check, setCheck] = useState(false);
+    values.check = check;
 
     const { email, password } = values;
 
     function submit() {
-        console.log('submited values', values);
-        console.log(check);
+        
     }
 
     return (

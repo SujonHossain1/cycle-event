@@ -1,5 +1,5 @@
 import React from 'react';
-import user from '../../assets/images/user.jpg';
+import user from '../../assets/images/avatar.png';
 
 const Information = () => {
     return (
@@ -30,18 +30,6 @@ const Information = () => {
                         <input type="password" className="form-control" id="inputPassword4" placeholder="+88 017++++++" />
                     </div>
                 </div>
-                <div className="form-row row">
-                    <div className="form-group pb-3 col-md-6">
-                        <label className="pb-1" htmlFor="inputAddress">Password</label>
-                        <input type="text" className="form-control" id="inputAddress" placeholder="Password" />
-                    </div>
-                    <div className="form-group pb-3 col-md-6">
-                        <label className="pb-1" htmlFor="inputPassword4">Confirm Password</label>
-                        <input type="password" className="form-control" id="inputPassword4" placeholder="Confirm Password" />
-                    </div>
-                </div>
-
-
                 <div className="form-row row">
                     <div className="form-group pb-3 col-md-6">
                         <label className="pb-1" htmlFor="inputCity">Street</label>

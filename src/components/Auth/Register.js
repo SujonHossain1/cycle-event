@@ -1,4 +1,6 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { register } from '../../store/actions/userAction';
 import useForm from './useForm';
 import validate from './validate';
 
@@ -6,8 +8,14 @@ const Register = () => {
     const { values, errors, inputHandler, submitHandler } = useForm(submit, validate);
     const { fullName, email, password } = values;
 
+    const dispatch = useDispatch();
     function submit() {
-        console.log('submited values', values);
+        const user = {
+            name: fullName,
+            email,
+            password
+        }
+        dispatch(register(user));
     }
 
     return (
@@ -20,7 +28,7 @@ const Register = () => {
                     name="fullName"
                     onChange={inputHandler}
                     defaultValue={values.fullName}
-                    placeholder="Jhon Deo"
+                    placeholder="John Deo"
                 />
                 {errors.fullName && <p className="error">{errors.fullName}</p>}
             </div>
@@ -32,7 +40,7 @@ const Register = () => {
                     name="email"
                     onChange={inputHandler}
                     defaultValue={values.email}
-                    placeholder="jhondeo@example.com"
+                    placeholder="johndeo@example.com"
                 />
                 {errors.email && <p className="error">{errors.email}</p>}
             </div>
