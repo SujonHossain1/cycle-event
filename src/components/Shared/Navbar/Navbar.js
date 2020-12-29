@@ -2,6 +2,8 @@ import React, { useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import avatar from '../../../assets/images/avatar.png';
 import UserDropdown from './UserDropdown';
+import { FaShoppingCart, HiOutlineShoppingCart } from 'react-icons/hi';
+import { useSelector } from 'react-redux';
 
 
 
@@ -12,9 +14,9 @@ const navbarRoutes = [
         route: ''
     },
     {
-        id: 3,
-        title: 'Schedule',
-        route: 'schedule'
+        id: 2,
+        title: 'About',
+        route: 'about'
     },
     {
         id: 4,
@@ -45,6 +47,9 @@ const Navbar = () => {
 
     }, []);
 
+    const cart = useSelector(state => state.shop.cart);
+    console.log(cart)
+
     return (
         <nav className="navbar navbar-expand sticky d-none d-md-block">
             <div className="container">
@@ -58,10 +63,19 @@ const Navbar = () => {
                         ))
                     }
                     <li className="nav-item">
+                        <Link className="shop-cart">
+                            <HiOutlineShoppingCart />
+                            <span className="shop-count"> {cart.length } </span>
+                        </Link>
+                    </li>
+                    <li className="nav-item">
                         <button type="button" className="btn btn-primary text-white ml-3" data-toggle="modal" data-target="#modal">Register</button>
                     </li>
+                    <li className="nav-item">
+                        <Link to="/shop" className="btn btn-primary text-white ml-3">Shop</Link>
+                    </li>
                     <li className="nav-item dropdown">
-                        <span  className="nav-link dropdown-toggle pr-0" id="userDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                        <span className="nav-link dropdown-toggle pr-0" id="userDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
                             <img className="avatar" src={avatar} alt="" />
                             <span className="ml-1">Sujon Hossain</span>
                         </span>

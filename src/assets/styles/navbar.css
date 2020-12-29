@@ -2,7 +2,7 @@
     background: #fff;
     padding-top: .9rem;
     padding-bottom: .9rem;
-    box-shadow: 1px 1px 8px -20px rgba(0, 0, 0, 0.2), 4px 0px 5px 1px rgba(0, 0, 0, 0.19);
+    box-shadow: 1px 1px 8px -20px rgba(0, 0, 0, 0.2), 4px 0 5px 1px rgba(0, 0, 0, 0.19);
 }
 
 .navbar-brand {
@@ -14,7 +14,7 @@
 }
 
 .pd {
-    padding: 0px 15px !important;
+    padding:0 15px !important;
 }
 
 .nav-link {
@@ -26,10 +26,10 @@
 .nav-link:hover{
     color: var(--primary-color) !important;
 }
-.btn-check:focus+.btn,
+/* .btn-check:focus+.btn,
 .btn:focus {
     box-shadow: none !important;
-}
+} */
 
 .form-control:focus {
     box-shadow: none !important;
@@ -165,7 +165,7 @@
 }
 
 .nav-pills .nav-link {
-    border-radius: 0px;
+    border-radius:0;
     padding: 11px;
 }
 

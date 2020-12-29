@@ -9,7 +9,8 @@ import Home from './Home/Home';
 import Leader from './Leader/Leader';
 import Profile from './Profile/Profile';
 import Footer from './Shared/Footer/Footer';
-import Navbar from './Shared/Navbar/Navbar';
+import ProductDetails from './Shop/ProductDetails';
+import Shop from './Shop/Shop';
 
 
 const Routes = () => {
@@ -21,10 +22,14 @@ const Routes = () => {
             <Route path="/blogs/:id"> <BlogDetails /> </Route>
             <Route path="/register"> <EventDetails /> </Route>
             <Route path="/contact"> <Contact /> </Route>
+            <Route exact path="/shop"> <Shop /> </Route>
+            <Route path="/shops/:id"> <ProductDetails/> </Route>
             <Route path="/schedule"> <Leader /> </Route>
 
             {/* ============== Backend Routes ============= */}
-            <Route path="/backend/blogs"> <BlogsBackend/> </Route>
+            <Route exact path="/backend/blogs">
+                <BlogsBackend/>
+            </Route>
         </Switch>
     );
 };

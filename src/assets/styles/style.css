@@ -6,6 +6,7 @@
 @import 'blog.css';
 @import 'profile.css';
 @import 'contact.css';
+@import 'shop.css';
 @import 'schedule.css';
 @import 'footer.css';
 
@@ -45,7 +46,7 @@ h6 {
 /* Blog Section */
 #blog-section {
 	background-color: var(--bg-color2);
-	padding: 50px 0px;
+	padding: 50px 0;
 	color: var(--font-color);
 	text-align: left;
 }
@@ -59,7 +60,7 @@ h6 {
 }
 
 .blog-item {
-	box-shadow: 0px 5px 11px 0px rgba(148, 146, 245, 0.15);
+	box-shadow:0 5px 11px 0 rgba(148, 146, 245, 0.15);
 	border-radius: 8px;
 }
 

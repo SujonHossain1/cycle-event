@@ -2,7 +2,7 @@
     background: url(../images/biography-bg.png) no-repeat;
     background-size: cover;
     color: white;
-    padding: 80px 0px;
+    padding: 80px 0;
     width: 100%;
 
 }
@@ -12,7 +12,7 @@
     border: 5px solid linear-gradient(blue, #E91E63);
     padding: 65px 99px 87px;
     margin-top: 15px;
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    box-shadow:0 0 10px 0 rgba(0, 0, 0, 0.2);
     color: black;
     background: transparent;
 }
