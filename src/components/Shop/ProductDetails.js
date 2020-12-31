@@ -1,37 +1,51 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import cycleImg from '../../assets/images/cycle.jpg';
-import { getSingleProduct } from '../../store/actions/shopAction';
+import { addToCart, getSingleProduct } from '../../store/actions/shopAction';
 
 const ProductDetails = () => {
     const { id } = useParams();
     const dispatch = useDispatch();
-    const productItem = useSelector(state => state.shop.productItem)
+    const productItem = useSelector(state => state.shop.productItem);
+    const [quantity, setQuantity] = useState(1);
+    const [addedSuccessful, setAddedSuccessful] = useState(false);
+
+    const { name, description, img, price, stock } = productItem;
 
     useEffect(() => {
-         dispatch(getSingleProduct(parseInt(id)))
+        dispatch(getSingleProduct(parseInt(id)))
     }, [dispatch, id]);
-    
-    console.log(id)
-    
+
+    const handleAddToCart = () => {
+        productItem.quantity = quantity;
+        console.log(productItem)
+        dispatch(addToCart(productItem.id));
+        setAddedSuccessful(true);
+    }
+    setTimeout(() => {
+        setAddedSuccessful(false);
+    }, 2000)
     return (
-        <div className="container">
+        <div className="container mt-4">
             <div className="row">
                 <div className="col-md-6">
-                    <h2>Duranta Steel 1-Spd City Bike 26 Black</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo impedit nam inventore laboriosam delectus deleniti voluptatem, repellat ducimus fuga consequuntur, nesciunt sequi magnam, sed saepe id voluptatum ullam soluta assumenda!</p>
-                    <h6>Price: 12550 Tk</h6>
-                    <p>Available Product: 6</p>
-                    <div className="d-flex">
-                        <button className="btn btn-light">-</button>
-                         <span className="mx-2 btn"> 23 </span>
-                        <button className="btn btn-light">+</button>
+                    <h2> {name} </h2>
+                    <p>{description}</p>
+                    <h6>Price: {price} Tk</h6>
+                    <p>Available Product: {stock}</p>
+                    <span className="quantity-btn">
+                        <button onClick={() => setQuantity(quantity <= 1 ? 1 : quantity - 1)} className="btn btn-sm">-</button>
+                        <span className="mx-2 btn"> {quantity} </span>
+                        <button onClick={() => setQuantity(quantity + 1)} className="btn btn-sm">+</button>
+                    </span>
+                    <div className="mt-2">
+                        <button onClick={handleAddToCart} className="btn btn-warning mt-2 rounded-pill ">Add To Cart</button>
+                        <span className="success"> {addedSuccessful && "Item added to cart Successfully"} </span>
                     </div>
-                    <button className="btn btn-warning mt-2 rounded-pill">Add To Cart</button>
                 </div>
                 <div className="col-md-6">
-                    <img className="img-fluid" src={cycleImg} alt=""/>
+                    <img className="img-fluid" src={img} alt="" />
                 </div>
             </div>
         </div>

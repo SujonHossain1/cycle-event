@@ -8,6 +8,7 @@ const initialState = {
             brand: 'Duranta',
             price: 12500,
             stock: 24,
+            quantity: 1,
             img: 'https://www.avoncycles.com/images/ProductImages/large/calypso-Ih21591445892.jpg',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero facilis ipsa minima eaque rerum aperiam est nisi perspiciatis unde, architecto expedita soluta ratione dicta odit quisquam quia non cum ut.'
         },
@@ -17,6 +18,7 @@ const initialState = {
             brand: 'Duranta',
             price: 15500,
             stock: 4,
+            quantity: 1,
             img: 'https://www.pcbcycles.com/wp-content/uploads/2020/06/XENON-Model-24-054-XN.jpg',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero facilis ipsa minima eaque rerum aperiam est nisi perspiciatis unde, architecto expedita soluta ratione dicta odit quisquam quia non cum ut.'
         },
@@ -26,6 +28,7 @@ const initialState = {
             brand: 'Duranta',
             price: 15500,
             stock: 4,
+            quantity: 1,
             img: 'https://www.pcbcycles.com/wp-content/uploads/2020/06/XENON-Model-24-054-XN.jpg',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero facilis ipsa minima eaque rerum aperiam est nisi perspiciatis unde, architecto expedita soluta ratione dicta odit quisquam quia non cum ut.'
         },
@@ -35,6 +38,7 @@ const initialState = {
             brand: 'Duranta',
             price: 12500,
             stock: 24,
+            quantity: 1,
             img: 'https://www.avoncycles.com/images/ProductImages/large/calypso-Ih21591445892.jpg',
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero facilis ipsa minima eaque rerum aperiam est nisi perspiciatis unde, architecto expedita soluta ratione dicta odit quisquam quia non cum ut.'
         },

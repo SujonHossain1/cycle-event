@@ -63,7 +63,7 @@ const Navbar = () => {
                         ))
                     }
                     <li className="nav-item">
-                        <Link className="shop-cart">
+                        <Link className="shop-cart" to="/checkout">
                             <HiOutlineShoppingCart />
                             <span className="shop-count"> {cart.length } </span>
                         </Link>

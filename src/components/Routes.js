@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import BlogsBackend from './backend/Blogs/BlogsBackend';
 import Blog from './Blog/Blog';
 import BlogDetails from './Blog/BlogDetails';
+import Checkout from './Checkout/Checkout';
 import Contact from './Contact/Contact';
 import EventDetails from './Events/EventDetails';
 import Home from './Home/Home';
@@ -25,6 +26,7 @@ const Routes = () => {
             <Route exact path="/shop"> <Shop /> </Route>
             <Route path="/shops/:id"> <ProductDetails/> </Route>
             <Route path="/schedule"> <Leader /> </Route>
+            <Route path="/checkout"> <Checkout/> </Route>
 
             {/* ============== Backend Routes ============= */}
             <Route exact path="/backend/blogs">

@@ -35,3 +35,13 @@
 .favorites .icon{
     font-size: 18px;
 }
+.quantity-btn{
+    border: 1px solid#d3d3d3;
+    padding: 11px;
+    border-radius: 5px;
+}
+.success{
+    color: green;
+    font-size: 16px;
+    padding-left: 15px;
+}

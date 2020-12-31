@@ -24,7 +24,7 @@ const events = [
         name: 'Mirpur Stadium, Dhaka',
         day: '31 December 2020',
         conference: 'CONFERENCE 2020',
-        date: 'Dec 31 2020 11:05:00',
+        date: 'Jan 1 2021 11:05:00',
         route: 'dhaka-cycle-event'
     }
 ]
